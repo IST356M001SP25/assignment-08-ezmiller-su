@@ -1,7 +1,7 @@
 # Reflection
 
-Student Name:  name
-Sudent Email:  email
+Student Name:  Ezra J Miller
+Sudent Email:  ezmiller@hotmail.com
 
 ## Instructions
 
@@ -23,3 +23,5 @@ Examples:
 **Best Reflection** "I learned when to use while vs for loops. While loops are for sentiel-controlled values (waiting for a condition to occur), vs for loops are for iterating over collections of fixed values."
 
 `--- Reflection Below This Line ---`
+
+In location_dashboard.py, I learned how to create a more advanced layout in streamlit. I also practiced subsetting and filtering, and feel like I finally got a good grasp on how to use pd.pivot_table
