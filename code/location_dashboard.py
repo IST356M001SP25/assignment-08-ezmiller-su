@@ -22,5 +22,13 @@ selected_location = tickets_in_top_locations[tickets_in_top_locations['location'
 
 
 st.metric("Total tickets issued", selected_location.shape[0])
+fig1, ax1 = plt.subplots()
+ax1.set_title('Tickets Issued by Hour of Day')
+sns.barplot(data=selected_location, x="hourofday", y="count", estimator="sum", hue="hourofday", ax=ax1)
+st.pyplot(fig1)
 
 st.metric("Total amount", f"$ {selected_location['amount'].sum()}")
+fig2, ax2 = plt.subplots()
+ax2.set_title('Tickets Issued by Day of Week')
+sns.barplot(data=selected_location, x="dayofweek", y="count", estimator="sum", hue="dayofweek", ax=ax2)
+st.pyplot(fig2)
