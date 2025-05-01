@@ -110,7 +110,7 @@ The tests in `test_etl.py` verify your functions by checking column names and ro
 
 #### map_dashboard.py
 
-This data dashboard will visualize the top locations on a heatmap. Each location should plotted with circle  representing the amount of fines issued at that location. If you use geopandas this will be very little code.
+This data dashboard will visualize the top locations on a heatmap. Each location should plotted with circle representing the amount of fines issued at that location. If you use geopandas this will be very little code.
 
 Here's an animation of the dashboard in action:
 
