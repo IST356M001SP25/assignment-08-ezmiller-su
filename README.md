@@ -49,7 +49,7 @@ Among the source columns there are engineered columns:
 
 ### The objective
 
-You will create two streamlit dashboards in this assignment.  The first dashboard will visualize where the top tickets are issued.
+You will create two streamlit dashboards in this assignment. The first dashboard will visualize where the top tickets are issued.
 
 The second dashboard will allow the user to select a location then visualize the distribution of tickets by day of the week and hour of the day.
 
