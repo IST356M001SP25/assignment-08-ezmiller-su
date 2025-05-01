@@ -7,9 +7,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 st.set_page_config(layout="wide")
 
-
 tickets_in_top_locations = pd.read_csv("cache/tickets_in_top_locations.csv")
-
 
 st.title("Top Locations for Parking Within Syracuse")
 st.subheader("Dashboard of parking tickets issued in locations totaling at least $1000 in violation fines.")
@@ -26,6 +24,7 @@ with col1:
     fig1, ax1 = plt.subplots()
     ax1.set_title('Tickets Issued by Hour of Day')
     sns.barplot(data=selected_location, x="hourofday", y="count", estimator="sum", hue="hourofday", ax=ax1)
+    ax1.set(xlabel='Hour of the Day', ylabel='Number of Tickets')
     st.pyplot(fig1)
 
 with col2:
@@ -33,6 +32,7 @@ with col2:
     fig2, ax2 = plt.subplots()
     ax2.set_title('Tickets Issued by Day of Week')
     sns.barplot(data=selected_location, x="dayofweek", y="count", estimator="sum", hue="dayofweek", ax=ax2)
+    ax2.set(xlabel='Day of the Week', ylabel='Number of Tickets')
     st.pyplot(fig2)
 
 st.map(selected_location[['lat', 'lon']])
