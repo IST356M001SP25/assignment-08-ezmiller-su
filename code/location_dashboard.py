@@ -32,3 +32,5 @@ fig2, ax2 = plt.subplots()
 ax2.set_title('Tickets Issued by Day of Week')
 sns.barplot(data=selected_location, x="dayofweek", y="count", estimator="sum", hue="dayofweek", ax=ax2)
 st.pyplot(fig2)
+
+st.map(selected_location[['lat', 'lon']])
