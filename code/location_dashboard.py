@@ -18,10 +18,9 @@ locations = tickets_in_top_locations['location'].unique()
 
 location = st.selectbox("Select a location:", locations)
 
+selected_location = tickets_in_top_locations[tickets_in_top_locations['location'] == location]
 
 
-st.text('Total Tickets Issued')
-st.metric(tickets_in_top_locations[tickets_in_top_locations['location'] == location].shape[0])
+st.metric("Total tickets issued", selected_location.shape[0])
 
-st.text('Total Amount')
-st.metric("Total amount", f"$ {top_locations['amount'].sum()}")
+st.metric("Total amount", f"$ {selected_location['amount'].sum()}")
